@@ -1,0 +1,302 @@
+.header {
+    
+    @include desktop-sm {
+        display: flex;
+        align-items: stretch;
+    }
+    &__main {
+        display: flex;
+        border-bottom: 2px solid #95B03C;
+        height: 62px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        z-index: 2;
+        @include tablet {
+            padding: 20px 40px;
+            height: initial;
+        }
+        @include tablet-lg {
+            padding: 20px 100px;
+        }
+        @include desktop-sm {
+            width: 280px;
+            flex-direction: column;
+            padding: 27px 30px;
+            border-bottom: none;
+            justify-content: stretch;
+            min-height: 100vh;
+            box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__logo {
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        @include tablet {
+            width: 222px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 55px;
+        padding: 0 10px;
+        @include tablet {
+            height: initial;
+            padding: 20px 40px;
+        }
+        @include tablet-lg {
+            padding: 20px 100px;
+        }
+        @include desktop-sm {
+            height: initial;
+            flex-grow: 2;
+        }
+    }
+
+    &__additionally {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        &-desk {
+            height: 100%;
+            align-items: space-between;
+            justify-content: space-between;
+            width: 120px;
+            flex-wrap: wrap;
+            padding: 10px;
+            border-right: 1px solid rgba(255, 255, 255, 0.25);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            @include desktop-xl {
+                flex-wrap: nowrap;
+                width: 330px;
+                
+            }
+        }
+    }
+
+    &__button {
+        width: 138px;
+        height: 43px;
+        background: #3C3C3B;
+        outline: none;
+        border: none;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 0 20px;
+        &:hover {
+            background-color: #95B03C;
+        }
+
+        @include tablet {
+            width: 250px;
+            height: 55px;
+        }
+    }
+
+    &__item {
+        padding: 0 5px;
+        &:first-child {
+            padding-left: 0;
+        }
+        @include tablet {
+            padding: 0 20px;
+        }
+
+        &-desk {
+            width: 50%;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__right {
+        flex-grow: 2;
+        display: flex;
+        height: 100px;
+    }
+
+    &__section {
+
+        &-white {
+            width: 57%;
+            overflow: hidden;
+        }
+
+        &-green {
+            width: 43%;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            border-bottom: 1px solid #95B03C;
+            
+        }
+    }
+    &__greenSquare {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -2;
+        width: 100%;
+        height: 950px;
+        background-color: #95B03C;
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        width: 100%;
+        padding: 14px 29px;
+
+        @include desktop-lg {
+            padding: 14px 50px;
+        }
+    }
+
+    &__link {
+        padding-right: 12px;
+        a {
+            text-decoration: none;
+            color: #3C3C3B;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+        }
+        &-1lvl {
+            position: relative;
+            &::after {
+                position: absolute;
+                top: 35%;
+                right: -4px;
+                border: solid #3C3C3B;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 2px;
+                content: '';
+                transform: rotate(45deg);
+            }
+        }
+    }
+    &__search {
+        display: flex;
+        padding: 8px 30px;
+        background: #F8F8F8;
+        
+        @include desktop-lg {
+            padding: 8px 50px;
+        }
+        input {
+            flex-grow: 2;
+            height: 38px;
+            border: 1px solid #E0E0E0;
+            padding: 10px 15px;
+        }
+    }
+    &__searchBtn {
+        color: white;
+        width: 131px;
+        height: 38px;
+        background: #3C3C3B;
+        position: relative;
+        padding-left: 36px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background: #95B03C;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            height: 16px;
+            width: 16px;
+            left: 36px;
+            background: url(../img/search.svg) center/cover no-repeat;
+        }
+    }
+
+    &__contacts {
+        padding: 20px 18px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        flex-grow: 2;
+        a {
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+    }
+
+    &__cityBlock {
+        padding-left: 15px;
+        position: relative;
+    &::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 0;
+            width: 13px;
+            height: 13px;
+            background: url(../img/location.svg)  no-repeat;
+        }
+    }
+
+    &__city {
+        width: 70px;
+        color: white;
+        background: transparent;
+        border: none;
+        border-bottom: 1px dashed white;
+        outline: none;
+        font-size: 11px;
+        
+        option {
+            color: black;
+        }
+    }
+    &__callBack {
+        color: white;
+        background: #3C3C3B;
+        border: none;
+        outline: none;
+        padding: 29px 20px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 14px;
+        display: flex;
+        width: 147px;
+        cursor: pointer;
+        &:hover {
+            background: #1a0909;
+        }
+        @include desktop-lg {
+            width: 180px;
+            padding: 29px 40px;
+        }
+        @include desktop-xl {
+            width: 220px;
+            padding: 29px 53px;
+
+        }
+     }
+}

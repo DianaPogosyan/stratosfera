@@ -1,0 +1,75 @@
+
+.d-fl {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-bl {
+    display: block;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto.woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Robotomedium.woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Robotobold.woff');
+    font-weight: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+html {
+    min-width: 320px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+.left100 {
+    left: -100%!important;
+}
+
+.left200 {
+    left: -200%!important;
+}
+.left0 {
+    left: 0!important;
+}
+@import "base/variables";
+@import "base/mixins";
+
+@import "parts/header";
+@import "parts/menu";
+
+.d-mobile-none {
+    @media only screen and (max-width: $wd-tablet - 1px) {
+        display: none;
+    }
+}
+.d-tablet-none {
+    @media only screen and (max-width: $wd-desktop-sm - 1px) {
+        display: none;
+    }
+}
+.d-desktop-none {
+    @include desktop-sm {
+        display: none;
+    }
+}
