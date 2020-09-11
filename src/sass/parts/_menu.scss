@@ -155,16 +155,19 @@
             text-decoration: none;
             
         }
+        &-2lvl:nth-child(1),:nth-child(2):active a {
+            color: #3C3C3B;
+        }
         &:active {
             background: #95B03C;
             color: white;
             &::after {
                 border-color: white;
-            }
+            }a{
+            color: white!important;
         }
-        &:active ~ a{
-            color: white;
         }
+ 
         &-arr {
             &::after {
                 position: absolute;

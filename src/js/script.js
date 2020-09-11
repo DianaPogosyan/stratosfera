@@ -17,7 +17,7 @@ $(document).ready(function() {
             e.preventDefault();   
             hiddenMenu.addClass('slide-left').animate({left: left});
             $(this).parent().siblings().find('ul').hide();
-            $(this).siblings('ul').show().addClass('menu-active'); 
+            $(this).siblings('ul').show().addClass('menu-active');
             $(this).parent().parent().find(back).on('click', function(){
                 hiddenMenu.animate({left: close}, 'fast');
             });
